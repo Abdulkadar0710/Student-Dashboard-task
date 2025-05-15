@@ -62,7 +62,7 @@ export default function AddStudentPage() {
 
     setIsSubmitting(true)
     try {
-      await addStudent(values)
+      await addStudent(values);
       toast({
         title: "Student added",
         description: "The student has been successfully added to the system.",
@@ -108,7 +108,7 @@ export default function AddStudentPage() {
                 <FormItem>
                   <FormLabel>Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" {...field} />
+                    <Input placeholder="Name" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -122,7 +122,7 @@ export default function AddStudentPage() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="john.doe@example.com" {...field} />
+                    <Input placeholder="Exp@example.com" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -136,7 +136,7 @@ export default function AddStudentPage() {
                 <FormItem>
                   <FormLabel>Phone Number</FormLabel>
                   <FormControl>
-                    <Input placeholder="(123) 456-7890" {...field} />
+                    <Input placeholder="1234567890" {...field} />
                   </FormControl>
                   <FormDescription>Optional</FormDescription>
                   <FormMessage />

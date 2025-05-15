@@ -31,7 +31,7 @@ const firebaseConfig = {
 }
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig)
+export const app = initializeApp(firebaseConfig)
 const auth = getAuth(app)
 
 type AuthContextType = {
@@ -61,7 +61,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       await signInWithEmailAndPassword(auth, email, password)
     } catch (error) {
-      console.error("Login error:", error)
+      console.error("Login error:", error) 
       throw error
     }
   }

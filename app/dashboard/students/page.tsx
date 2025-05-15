@@ -63,12 +63,12 @@ export default function StudentsPage() {
           <h1 className="text-3xl font-bold tracking-tight">Students</h1>
           <p className="text-muted-foreground">Manage and view all students in the system.</p>
         </div>
-        <Button asChild>
+        {/* <Button asChild>
           <Link href="/dashboard/add-student">
             <UserPlus className="mr-2 h-4 w-4" />
-            Add Student
+            Add Student 
           </Link>
-        </Button>
+        </Button> */}
       </div>
 
       <div className="flex flex-col gap-4 md:flex-row">
@@ -84,7 +84,7 @@ export default function StudentsPage() {
         <Select value={courseFilter} onValueChange={setCourseFilter}>
           <SelectTrigger className="w-full md:w-[180px]">
             <SelectValue placeholder="All Courses" />
-          </SelectTrigger>
+          </SelectTrigger> 
           <SelectContent>
             <SelectItem value="all">All Courses</SelectItem>
             {courses.map((course) => (
@@ -107,8 +107,8 @@ export default function StudentsPage() {
                     <Skeleton className="h-4 w-full" />
                     <Skeleton className="h-8 w-full" />
                   </div>
-                </CardContent>
-              </Card>
+                </CardContent> 
+              </Card> 
             ))
           : filteredStudents.map((student) => (
               <Link
@@ -117,7 +117,7 @@ export default function StudentsPage() {
                 className="transition-transform hover:scale-[1.02]"
               >
                 <Card>
-                  <CardContent className="p-6">
+                  <CardContent className="p-6"> 
                     <div className="space-y-2">
                       <h3 className="font-medium">{student.name}</h3>
                       <p className="text-sm text-muted-foreground">{student.email}</p>
